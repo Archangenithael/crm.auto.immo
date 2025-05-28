@@ -139,6 +139,12 @@
             <span>Demande directe</span>
             <span class="absolute top-1 right-1 h-3 w-3 rounded-full bg-green-500 ring-2 ring-white dark:ring-[#1e1e2a] site-indicator"></span>
         </button>
+        
+        <button class="filter-btn relative flex items-center justify-center p-3 rounded-lg border-2 border-pink-300 bg-pink-50 dark:bg-pink-900/20 text-pink-700 dark:text-pink-300 font-medium transition-all duration-200 hover:bg-pink-100 dark:hover:bg-pink-800/30 animate-fadeIn" data-filter="allo" data-active="true" style="animation-delay: 0.5s">
+            <i class="fas fa-filter mr-2 animate-spin-slow"></i>
+            <span>ALLO</span>
+            <span class="absolute top-1 right-1 h-3 w-3 rounded-full bg-green-500 ring-2 ring-white dark:ring-[#1e1e2a] site-indicator"></span>
+        </button>
     </div>
     
     <div class="mt-4 text-xs text-gray-500 dark:text-gray-400 italic">
@@ -175,46 +181,155 @@
 
                     <!-- Catégories d'acquéreurs -->
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <!-- Catégorie A -->
-                        <div class="category-card bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/10 dark:to-red-900/20 border-red-200 dark:border-red-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.1s">
-                            <div class="category-header bg-gradient-to-r from-red-100 to-red-200 dark:from-red-900/30 dark:to-red-900/40">
-                                <h3 class="text-xl font-bold text-red-800 dark:text-red-300">Catégorie A</h3>
-                                <span class="badge bg-gradient-to-r from-red-500 to-red-600 text-white animate-bounce" id="countA">0</span>
-                            </div>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Très motivés, finançables (4D)</p>
-                            <div id="listA" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar"></div>
-                        </div>
+    <!-- Catégorie A -->
+    <div class="category-card bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/10 dark:to-red-900/20 border-red-200 dark:border-red-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.1s">
+        <div class="category-header bg-gradient-to-r from-red-100 to-red-200 dark:from-red-900/30 dark:to-red-900/40">
+            <h3 class="text-xl font-bold text-red-800 dark:text-red-300">Catégorie A</h3>
+            <span class="badge bg-gradient-to-r from-red-500 to-red-600 text-white animate-bounce" id="countA">3</span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Très motivés, finançables (4D)</p>
+        <div id="listA" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar">
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-red-100 dark:border-red-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Lucie Martin</h4>
+                    <span class="text-xs text-red-600 dark:text-red-400">Priorité haute</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Recherche T3 centre-ville, budget 250K€</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-red-100 dark:border-red-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Thomas Dubois</h4>
+                    <span class="text-xs text-red-600 dark:text-red-400">Contact récent</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Premier achat, apport 60K€, secteur sud</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-red-100 dark:border-red-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Marie &amp; Paul Leroy</h4>
+                    <span class="text-xs text-red-600 dark:text-red-400">Dossier complet</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Maison avec jardin, budget 320K€</p>
+            </div>
+        </div>
+    </div>
 
-                        <!-- Catégorie B -->
-                        <div class="category-card bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/10 dark:to-yellow-900/20 border-yellow-200 dark:border-yellow-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.2s">
-                            <div class="category-header bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-900/30 dark:to-yellow-900/40">
-                                <h3 class="text-xl font-bold text-yellow-800 dark:text-yellow-300">Catégorie B</h3>
-                                <span class="badge bg-gradient-to-r from-yellow-500 to-yellow-600 text-white animate-bounce" id="countB">0</span>
-                            </div>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Projets ~3 mois</p>
-                            <div id="listB" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar"></div>
-                        </div>
+    <!-- Catégorie B -->
+    <div class="category-card bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/10 dark:to-yellow-900/20 border-yellow-200 dark:border-yellow-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.2s">
+        <div class="category-header bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-900/30 dark:to-yellow-900/40">
+            <h3 class="text-xl font-bold text-yellow-800 dark:text-yellow-300">Catégorie B</h3>
+            <span class="badge bg-gradient-to-r from-yellow-500 to-yellow-600 text-white animate-bounce" id="countB">4</span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Projets ~3 mois</p>
+        <div id="listB" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar">
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-yellow-100 dark:border-yellow-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Sophie Blanc</h4>
+                    <span class="text-xs text-yellow-600 dark:text-yellow-400">En cours</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Appartement 2ch, quartier universitaire</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-yellow-100 dark:border-yellow-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Antoine Moreau</h4>
+                    <span class="text-xs text-yellow-600 dark:text-yellow-400">Visite prévue</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Studio ou T1, invest. locatif</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-yellow-100 dark:border-yellow-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Julien &amp; Laura</h4>
+                    <span class="text-xs text-yellow-600 dark:text-yellow-400">Dossier en attente</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Recherche maison 4ch, périphérie</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-yellow-100 dark:border-yellow-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Emma Durand</h4>
+                    <span class="text-xs text-yellow-600 dark:text-yellow-400">Nouvelle demande</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">T2 proche transport, budget 180K€</p>
+            </div>
+        </div>
+    </div>
 
-                        <!-- Catégorie C -->
-                        <div class="category-card bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/10 dark:to-blue-900/20 border-blue-200 dark:border-blue-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.3s">
-                            <div class="category-header bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-900/40">
-                                <h3 class="text-xl font-bold text-blue-800 dark:text-blue-300">Catégorie C</h3>
-                                <span class="badge bg-gradient-to-r from-blue-500 to-blue-600 text-white animate-bounce" id="countC">0</span>
-                            </div>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Projets ~6 mois</p>
-                            <div id="listC" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar"></div>
-                        </div>
+    <!-- Catégorie C -->
+    <div class="category-card bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/10 dark:to-blue-900/20 border-blue-200 dark:border-blue-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.3s">
+        <div class="category-header bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-900/40">
+            <h3 class="text-xl font-bold text-blue-800 dark:text-blue-300">Catégorie C</h3>
+            <span class="badge bg-gradient-to-r from-blue-500 to-blue-600 text-white animate-bounce" id="countC">3</span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Projets ~6 mois</p>
+        <div id="listC" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar">
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-blue-100 dark:border-blue-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Nicolas Petit</h4>
+                    <span class="text-xs text-blue-600 dark:text-blue-400">Long terme</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Maison à rénover, recherche terrain</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-blue-100 dark:border-blue-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Caroline Richard</h4>
+                    <span class="text-xs text-blue-600 dark:text-blue-400">En réflexion</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Attente vente bien actuel</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-blue-100 dark:border-blue-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Famille Dupont</h4>
+                    <span class="text-xs text-blue-600 dark:text-blue-400">Mutation prof.</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Arrive dans 6 mois, budget 290K€</p>
+            </div>
+        </div>
+    </div>
 
-                        <!-- Propriétaires -->
-                        <div class="category-card bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/10 dark:to-green-900/20 border-green-200 dark:border-green-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.4s">
-                            <div class="category-header bg-gradient-to-r from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-900/40">
-                                <h3 class="text-xl font-bold text-green-800 dark:text-green-300">Propriétaires</h3>
-                                <span class="badge bg-gradient-to-r from-green-500 to-green-600 text-white animate-bounce" id="countProp">0</span>
-                            </div>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Déjà propriétaires</p>
-                            <div id="listProp" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar"></div>
-                        </div>
-                    </div>
+    <!-- Propriétaires -->
+    <div class="category-card bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/10 dark:to-green-900/20 border-green-200 dark:border-green-800/30 animate-fadeInUp hover:animate-shake" style="animation-delay: 0.4s">
+        <div class="category-header bg-gradient-to-r from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-900/40">
+            <h3 class="text-xl font-bold text-green-800 dark:text-green-300">Propriétaires</h3>
+            <span class="badge bg-gradient-to-r from-green-500 to-green-600 text-white animate-bounce" id="countProp">5</span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Déjà propriétaires</p>
+        <div id="listProp" class="space-y-2 max-h-64 overflow-y-auto pr-2 scrollbar">
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-green-100 dark:border-green-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Marc &amp; Sylvie Bernard</h4>
+                    <span class="text-xs text-green-600 dark:text-green-400">2e achat</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Résidence secondaire bord de mer</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-green-100 dark:border-green-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Pierre Lambert</h4>
+                    <span class="text-xs text-green-600 dark:text-green-400">Investisseur</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Recherche lot de 2-3 appartements</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-green-100 dark:border-green-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Isabelle Fournier</h4>
+                    <span class="text-xs text-green-600 dark:text-green-400">Montée en gamme</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Vend T3 pour acheter villa</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-green-100 dark:border-green-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Laurent Morel</h4>
+                    <span class="text-xs text-green-600 dark:text-green-400">SCPI</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Diversification patrimoine, 200K€</p>
+            </div>
+            <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-green-100 dark:border-green-800/40">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-medium text-gray-800 dark:text-gray-200">Christine &amp; Jean</h4>
+                    <span class="text-xs text-green-600 dark:text-green-400">Retraités</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Recherchent plain-pied accessible</p>
+            </div>
+        </div>
+    </div>
+</div>
 
                     <!-- Bouton ajouter acquéreur -->
                     <button id="addAcquirer" class="mt-8 px-6 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-indigo-500/30 hover:shadow-xl animate-pulse hover:animate-none group">
